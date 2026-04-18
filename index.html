@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Busca Salas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+  <header class="hero">
+    <h1>Buscador de Salas UC</h1>
+    <p>(Anteriormente Busca-OFG)</p>
+    <p>Selecciona módulos y encuentra salas disponibles por campus.</p>
+  </header>
+
+  <section class="controls" aria-label="Filtros de búsqueda">
+    <label for="campus">Campus</label>
+    <select id="campus">
+      <option>San Joaquín</option>
+      <option>Casa Central</option>
+      <option>Lo Contador</option>
+      <option>Oriente</option>
+      <option>Villarica</option>
+    </select>
+
+    <div class="actions">
+      <button id="searchBtn" type="button">Buscar</button>
+      <button id="clearBtn" type="button" class="ghost">Limpiar selección</button>
+    </div>
+  </section>
+
+  <section aria-label="Matriz de módulos">
+    <h2>Módulos horarios</h2>
+    <div id="grid" aria-label="Selector de módulos"></div>
+  </section>
+
+  <section aria-live="polite">
+    <h2>Salas disponibles</h2>
+    <p id="status" class="status"></p>
+    <div id="resultado"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
